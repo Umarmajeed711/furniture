@@ -22,8 +22,6 @@ export const Home = () => {
 
           {/* Hero image */}
           <div  className="col-7">
-            {/* <Image src={"/SingleSeater.png"}  alt="" width={800} height={800}/> */}
-
             <Image src="/SingleSeater.png" alt="" className="heroImage"  />
           </div>
         </div>

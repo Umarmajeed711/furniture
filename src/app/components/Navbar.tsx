@@ -41,9 +41,9 @@ export const Navbar = () => {
             
             <ul className="nav-links gap-5">
                 <li><Link href="/" className="link active">Home</Link></li>
-                <li><Link href="/" className="link">Shop</Link></li>
-                <li><Link href="/" className="link">About</Link></li>
-                <li><Link href="/" className="link">Contact</Link></li>
+                <li><Link href="/shop" className="link">Shop</Link></li>
+                <li><Link href="/products" className="link">About</Link></li>
+                <li><Link href="/Contact" className="link">Contact</Link></li>
                 
             </ul>
 

@@ -1,0 +1,25 @@
+
+
+.cartHeader{
+    background-color: #FFF9E5;
+}
+
+.cartImage{
+    background-color: #FBEBB5;
+    border-radius: 5px;
+}
+
+.cartTotal{
+font-size: 32px;
+font-weight: 600;
+line-height: 48px;
+}
+
+.shoppingTotal{
+    color: #B88E2F;
+font-size: 20px;
+font-weight: 500;
+line-height: 30px;
+
+
+}

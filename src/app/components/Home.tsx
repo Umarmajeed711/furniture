@@ -3,7 +3,6 @@
 import '../Style.css'
 // import Image from "next/image";
 import { Image } from "react-bootstrap"
-// import { text } from "stream/consumers";
 import Carousel from 'react-bootstrap/Carousel';
 
 

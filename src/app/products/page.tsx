@@ -3,7 +3,7 @@ import { Image } from "react-bootstrap";
 import "./product.css";
 import { useState } from "react";
 
-export const page = () => {
+export const Page = () => {
 
   const [counter,setCounter] = useState(1)
   return (
@@ -250,4 +250,4 @@ export const page = () => {
   );
 };
 
-export default page;
+export default Page;

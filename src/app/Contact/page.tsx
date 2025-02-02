@@ -8,7 +8,7 @@ import { Properties } from "../components/properties";
 import { useFormik } from "formik";
 import * as yup from "yup";
 
-export const Contact = () => {
+ const Contact = () => {
   // contact Validation
   const contactValidation = yup.object({
     name: yup.string().required("name is required"),

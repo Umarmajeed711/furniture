@@ -8,7 +8,7 @@ import { Properties } from "../components/properties";
 import { useFormik } from "formik";
 import * as yup from "yup";
 
- const Contact = () => {
+ const ContactPage = () => {
   // contact Validation
   const contactValidation = yup.object({
     name: yup.string().required("name is required"),
@@ -198,4 +198,4 @@ import * as yup from "yup";
   );
 };
 
-export default Contact
+export default ContactPage

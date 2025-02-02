@@ -144,7 +144,6 @@
 }
 .article{
   height: 555px;
-  border: 1px solid black;
   display: flex;
   justify-content: space-between;
 }
@@ -364,6 +363,8 @@ border: 1px solid black;
   line-height: 25px;
 
 }
+/* undrline shop button */
+
 
 /* asgardSofa */
 
@@ -404,7 +405,6 @@ border: 1px solid black;
 }
 .article{
 height: 400px;
-border: 1px solid black;
 }
 .blogImage{
   height: 60%;

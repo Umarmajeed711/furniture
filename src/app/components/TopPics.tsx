@@ -4,8 +4,8 @@ import './component.css'
 export const TopPics = () => {
   return (
     <div>
-         <div className="mt-5 row ">
-          <div className="mycards p-2 col-lg-3 col-md-6 ">
+         <div className="mt-5 grid-container ">
+          <div className="mycards p-2">
             <div className="ImageDiv">
             <Image src="/ToppicsForyou/TrentorSofa.png" alt="" className="ImageHeight" />
             </div>
@@ -13,7 +13,7 @@ export const TopPics = () => {
             <p className="price">Rs. 25,000</p>
           </div>
 
-          <div className="mycards p-2 col-lg-3 col-md-6 ">
+          <div className="mycards p-2">
           <div className="ImageDiv">
             <Image src="/ToppicsForyou/Granite dining table with dining chair 1.png" alt="" className="ImageHeight"  />
             </div>
@@ -22,7 +22,7 @@ export const TopPics = () => {
           </div>
 
 
-          <div className="mycards p-2 col-lg-3 col-md-6 ">
+          <div className="mycards p-2">
           <div className="ImageDiv">
             <Image src="/ToppicsForyou/Mask group (1).png" alt="" className="ImageHeight" />
           </div>
@@ -31,7 +31,7 @@ export const TopPics = () => {
           </div>
 
 
-          <div className="mycards p-2 col-lg-3 col-md-6 ">
+          <div className="mycards p-2">
           <div className="ImageDiv">
             <Image src="/ToppicsForyou/Mask group (2).png" alt="" className="ImageHeight" />
           </div>

@@ -47,7 +47,7 @@ const Shop = () => {
 
       {/* Products */}
       <div className="container">
-        <div className="  mt-5 grid-container  ">
+        <div className="mt-5 grid-container  ">
           
           <div className="mycards p-2 "> 
           <div className="ImageDiv">
@@ -188,6 +188,7 @@ const Shop = () => {
             </div>
             <p className="title">Outdoor sofa set</p>
             <p className="price">Rs. 25,000</p>
+            
           </div>
 
         </div>

@@ -12,6 +12,7 @@ import { IoMdClose } from "react-icons/io";
 import { useState } from "react";
 import { GrCart } from "react-icons/gr";
 import { useRouter } from "next/navigation";
+import { Image } from "react-bootstrap";
 
 
 export const Navbar = () => {
@@ -39,7 +40,7 @@ export const Navbar = () => {
         <nav className="nav" >
             {/* logo */}
             <div>
-                LOGO
+            <p className="logo ps-2">Frnito</p>
             </div>
 
             {/* links & icons */}
@@ -84,11 +85,15 @@ export const Navbar = () => {
         <div className="sideBar">
          <p onClick={hideBar} className="closeIcon"><IoMdClose/></p>
         <ul className="sideBarLinks">
-        <li><div onClick={() => {navigateTo("/")}} className="link">Home</div></li>
-            <li><div onClick={() => {navigateTo("/shop")}}  className="link">Shop</div></li>
-            <li><div onClick={() => {navigateTo("/products")}}  className="link">About</div></li>
-            <li><div onClick={() => {navigateTo("/Contact")}}  className="link">Contact</div></li>
+        <li><div onClick={() => {navigateTo("/")}} className="sideLink">Home</div></li>
+            <li><div onClick={() => {navigateTo("/shop")}}  className="sideLink">Shop</div></li>
+            <li><div onClick={() => {navigateTo("/products")}}  className="sideLink">About</div></li>
+            <li><div onClick={() => {navigateTo("/Contact")}}  className="sideLink">Contact</div></li>
         </ul> 
+        <div className="d-flex flex-column align-items-center mt-5">
+        <Image src="/ShopImages/mablelogo/Meubel House_Logos-05.png" alt="" />
+         <p className="logo">Frnito</p>
+        </div>
         </div>
         : null
 }

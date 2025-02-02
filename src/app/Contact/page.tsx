@@ -3,13 +3,12 @@ import { HiLocationMarker } from "react-icons/hi";
 import { FaPhone } from "react-icons/fa6";
 import { GoClockFill } from "react-icons/go";
 import "./contact.css";
-import { Image } from "react-bootstrap";
 import { HeroSection } from "../components/HeroSection";
 import { Properties } from "../components/properties";
 import { useFormik } from "formik";
 import * as yup from "yup";
 
-export const page = () => {
+export const Contact = () => {
   // contact Validation
   const contactValidation = yup.object({
     name: yup.string().required("name is required"),
@@ -199,4 +198,4 @@ export const page = () => {
   );
 };
 
-export default page;
+export default Contact;

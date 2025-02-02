@@ -1,7 +1,6 @@
 "use client";
 
 import "./checkOut.css";
-import { Image } from "react-bootstrap";
 import { HeroSection } from "../components/HeroSection";
 import { useFormik } from "formik";
 import * as yup from "yup";

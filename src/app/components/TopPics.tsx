@@ -4,7 +4,7 @@ import './component.css'
 export const TopPics = () => {
   return (
     <div>
-         <div className="mt-5 grid-container ">
+         <div className="mt-5 topPics-grid-container ">
           <div className="mycards p-2">
             <div className="ImageDiv">
             <Image src="/ToppicsForyou/TrentorSofa.png" alt="" className="ImageHeight" />

@@ -74,6 +74,9 @@
   line-height: 36px;
 }
 
+.filterIcons{
+  font-size: 24px;
+}
 @media (max-width: 1399px) {
 }
 

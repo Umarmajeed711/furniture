@@ -1,7 +1,7 @@
 "use client";
 import { useFormik } from "formik";
 import "./account.css";
-import { Image } from "react-bootstrap";
+// import { Image } from "react-bootstrap";
 import * as yup from "yup";
 import { HeroSection } from "../components/HeroSection";
 import { Properties } from "../components/properties";

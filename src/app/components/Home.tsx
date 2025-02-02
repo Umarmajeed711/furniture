@@ -5,7 +5,8 @@ import '../Style.css'
 import { Image } from "react-bootstrap"
 import Carousel from 'react-bootstrap/Carousel';
 import { TopPics } from './TopPics';
-
+import { FaRegClock } from "react-icons/fa";
+import { RiCalendarTodoFill } from "react-icons/ri";
 
 export const Home = () => {
   return (
@@ -130,8 +131,8 @@ export const Home = () => {
                <span className="underButton">Read More</span>
 
                <div className="d-flex gap-2 justify-content-center mt-3">
-                <p>0</p>
-                <p>12:34 892-92</p>
+                <p><FaRegClock className='time'/> 5 min</p>
+                <p><RiCalendarTodoFill className='time'/> 2 Feb 2025</p>
                </div>
             </div>
 
@@ -151,8 +152,8 @@ export const Home = () => {
            <span className="underButton">Read More</span>
 
                <div className="d-flex gap-2 justify-content-center mt-3">
-                <p>0</p>
-                <p>12:34 892-92</p>
+               <p><FaRegClock className='time'/> 5 min</p>
+               <p><RiCalendarTodoFill className='time'/> 2 Feb 2025</p>
                </div>
             </div>
 
@@ -171,8 +172,8 @@ export const Home = () => {
             <span className="underButton">Read More</span>
 
                <div className="d-flex gap-2 justify-content-center mt-3">
-                <p>0</p>
-                <p>12:34 892-92</p>
+               <p><FaRegClock className='time'/> 5 min</p>
+               <p><RiCalendarTodoFill className='time'/> 2 Feb 2025</p>
                </div>
             </div>
 

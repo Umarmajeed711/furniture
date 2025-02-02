@@ -63,11 +63,6 @@ export const Navbar = () => {
                 <p><Link href="/Cart" className="link"><GrCart/></Link></p>  
                 
 
-                
-                {/* <p><FaRegUser /></p>
-                <p><FiSearch/></p>
-                <p><FaRegHeart /></p>
-                <p><GrCart/></p> */}
             </div>
 
             

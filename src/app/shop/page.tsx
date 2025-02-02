@@ -2,7 +2,11 @@ import { Image } from "react-bootstrap";
 import "./shop.css";
 import { HeroSection } from "../components/HeroSection";
 import { Properties } from "../components/properties";
+import { HiAdjustmentsHorizontal } from "react-icons/hi2";
+import { HiViewGrid } from "react-icons/hi";
+import { BsViewList } from "react-icons/bs";
 const Shop = () => {
+
   return (
     <div>
 
@@ -15,15 +19,14 @@ const Shop = () => {
       <div className="filter mt-5 d-flex justify-content-center align-items-center">
         <div
           className="container row "
-         
         >
           {/* filter icons div */}
           <div className="d-flex align-items-center justify-content-evenly col-12 col-md-6 gap-4">
             <div className="d-flex gap-3">
-              <p className="price">//</p>
-              <p>Filter</p>
-              <p>::</p>
-              <p>o</p>
+              <p className="filterIcons"><HiAdjustmentsHorizontal/></p>
+              <p className="whiteDiv">Filter</p>
+              <p className="filterIcons"><  HiViewGrid/></p>
+              <p className="filterIcons"><BsViewList/></p>
             </div>
 
             <div>
@@ -63,7 +66,6 @@ const Shop = () => {
               src="/ToppicsForyou/Granite dining table with dining chair 1.png"
               alt=""
               className="ImageHeight"
-              
             />
             </div>
             

@@ -51,7 +51,9 @@ ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 24px;
 }
+
 
 .sideBar {
   position: fixed;
@@ -80,7 +82,7 @@ ul li {
 .sideBarLinks li {
   width: 100%;
   text-align: center;
-  padding: 5px;
+  padding: 7px;
 }
 .sideBarLinks li:hover,
 .sideBarLinksli:active {
@@ -115,6 +117,10 @@ ul li {
 
   .hideOnPc {
     display: block !important;
+    font-size: 20px;
+  }
+  .nav-icons .link{
+    font-size: 20px !important;
   }
 }
 
@@ -123,6 +129,6 @@ ul li {
     width: 100vw;
   }
   .link {
-    font-size: 16px !important;
+    font-size: 15px !important;
   }
 }

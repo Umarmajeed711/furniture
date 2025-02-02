@@ -54,7 +54,7 @@ const Shop = () => {
             <Image src="/ToppicsForyou/TrentorSofa.png" alt="" className="ImageHeight"  />
             </div>
             <p className="title">Trentor Modular sofa-3</p>
-            <p className="price">Rs. 25,000</p>
+            <p className="price">Rs. 25,001</p>
           </div>
 
           <div className="mycards p-2 ">

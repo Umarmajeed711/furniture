@@ -4,20 +4,19 @@ import "./product.css";
 import { useState } from "react";
 import { TopPics } from "../components/TopPics";
 
- const Products = () => {
-  const [counter, setCounter] = useState(1);
+const Products = () => {
 
-  // function for increase counter/
+  const [counter,setCounter] = useState(1)
+
   const handleIncreaseCounter = () => {
-    setCounter(counter + 1);
-  };
+    setCounter(counter+1)
+  }
 
-  // function for decrease counter.
   const handleDecreaseCounter = () => {
-    if (counter > 1) {
-      setCounter(counter - 1);
+    if(counter > 1){
+      setCounter(counter - 1 );
     }
-  };
+  }
   return (
     <div className="container">
       {/* Breadcrums */}
@@ -215,5 +214,4 @@ import { TopPics } from "../components/TopPics";
     </div>
   );
 };
-
 export default Products

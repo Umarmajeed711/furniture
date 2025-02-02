@@ -1,17 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-
-.pageHeading{
-font-size: 48px;
-font-weight: 500;
-line-height: 72px;
+* {
+  font-family: "Poppins", sans-serif;
 }
-
-.breadcrums{
-font-size: 16px;
-font-weight: 300;
-line-height: 24px;
-}
-
 
 
 
@@ -77,8 +68,11 @@ line-height: 24px;
     box-shadow: 0 0 5px #000;
 }
 
-
-
+.requiredError{
+    color: red;
+    margin: 0;
+    font-size: 12px;
+}
 
 @media (max-width: 1399px) {
 
@@ -129,27 +123,6 @@ line-height: 24px;
             font-weight: 600;
             line-height: 24px;
             }
-
-
-            
-    
-    .property{
-        height: 250px;
-    }
-    
-    .propertyHeading{
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 25px;
-    }
-    
-    .propertypara{
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
-    color: #9F9F9F;
-    
-    }
     
     
 }
@@ -167,23 +140,7 @@ line-height: 24px;
         line-height: 20px;
         }
     
-    .property{
-        height: 250px;
-    }
     
-    .propertyHeading{
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 25px;
-    }
-    
-    .propertypara{
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
-    color: #9F9F9F;
-    
-    }
 }
 
 @media (max-width: 575px) {
@@ -205,7 +162,7 @@ line-height: 24px;
         }
         
         .policyDetails{
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 300;
         line-height: 22px;
         }
@@ -229,6 +186,11 @@ line-height: 24px;
             padding: 3px 15px;
         }
         
+        .lostPassword{
+            font-size: 11px;
+        font-weight: 600;
+        line-height: 16px;
+        }
     
 
 }

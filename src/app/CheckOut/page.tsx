@@ -1,10 +1,12 @@
 "use client";
-import { useFormik } from "formik";
+
 import "./checkOut.css";
 import { Image } from "react-bootstrap";
+import { HeroSection } from "../components/HeroSection";
+import { useFormik } from "formik";
 import * as yup from "yup";
 
-export const page = () => {
+ const CheckOut = () => {
   // billing Validation
   const billingValidation = yup.object({
     firstName: yup.string().required("first name is required"),
@@ -19,9 +21,8 @@ export const page = () => {
     number: yup.number().required("number is required"),
   });
 
-  {
-    /* // initailizes the billingFormik */
-  }
+  
+  // initailizes the billingFormik
   const billingFormik = useFormik({
     initialValues: {
       firstName: "",
@@ -37,37 +38,32 @@ export const page = () => {
 
     onSubmit: (values) => {
       console.log(values);
+      billingFormik.resetForm();
     },
   });
   return (
     <div>
-      {/* Front Image */}
-      <div className="d-flex justify-content-center align-items-center shop">
-        <div className="d-flex justify-content-center align-items-center flex-column">
-          <Image src="/ShopImages/mablelogo/Meubel House_Logos-05.png" alt="" />
-          <p className="pageHeading">Check Out</p>
-          <p className="breadcrums">
-            <span style={{ fontWeight: "500" }}>Home &gt;</span> check out
-          </p>
-        </div>
-      </div>
+     
+      {/* Hero Section */}
+      <HeroSection pageHeading={'Check Out'} navigate={'check Out'}/>
 
       <div className="container d-flex justify-content-center p-5">
       <form onSubmit={billingFormik.handleSubmit}>
-        <div className="row col-12">
+        <div className="row ">
 
           
           {/* Billing Details */}
-          <div className="col-6">
+          <div className="col-md-6 col-12">
             <p className="billingHeading">Billing Details</p>
+
+            {/* name div */}
             <div className="row">
               {/* first name div */}
-              <div className="my-3 col-6 row">
+              <div className="my-3 col-6 ">
                 <label htmlFor="firstname">
                   <p className="username">first name</p>
                   <input
                     type="text"
-                    required
                     id="firstname"
                     className="inputField "
                     name="firstName"
@@ -85,12 +81,11 @@ export const page = () => {
               </div>
 
               {/* last name div */}
-              <div className="my-3 col-6 row">
+              <div className="my-3 col-6 ">
                 <label htmlFor="lastname">
                   <p className="username">last name</p>
                   <input
                     type="text"
-                    required
                     id="lastname"
                     className="inputField "
                     name="lastName"
@@ -109,7 +104,7 @@ export const page = () => {
             </div>
 
             {/* Company name div */}
-            <div className="my-3 col-12 row">
+            <div className="my-3 row ">
               <label htmlFor="companyName">
                 <p className="username">Company name (Optional)</p>
                 <input type="text" id="companyName" className="inputField " />
@@ -117,7 +112,7 @@ export const page = () => {
             </div>
 
             {/* Country name div */}
-            <div className="my-3 col-12 row">
+            <div className="my-3  row">
               <label htmlFor="CountryName">
                 <p className="username">Country / Region </p>
                 <select
@@ -135,7 +130,7 @@ export const page = () => {
             </div>
 
             {/* street address div */}
-            <div className="my-3 col-12 row">
+            <div className="my-3  row">
               <label htmlFor="streetAddress">
                 <p className="username">Street address</p>
                 <input type="text" id="streetAddress" className="inputField "
@@ -154,7 +149,7 @@ export const page = () => {
             </div>
 
             {/* town city div */}
-            <div className="my-3 col-12 row">
+            <div className="my-3  row">
               <label htmlFor="townCity">
                 <p className="username">Town / City</p>
                 <input type="text" id="townCity" className="inputField "
@@ -173,7 +168,7 @@ export const page = () => {
             </div>
 
             {/* Province div */}
-            <div className="my-3 col-12 row">
+            <div className="my-3  row">
               <label htmlFor="Province">
                 <p className="username">Province</p>
                 <select name="countries" id="Province" className="inputField ">
@@ -186,7 +181,7 @@ export const page = () => {
             </div>
 
             {/* zipcode */}
-            <div className="my-3 col-12 row">
+            <div className="my-3  row">
               <label htmlFor="Zipcode">
                 <p className="username">Zipcode</p>
                 <input
@@ -209,7 +204,7 @@ export const page = () => {
             </div>
 
             {/* phone number */}
-            <div className="my-3 col-12 row">
+            <div className="my-3  row">
               <label htmlFor="phoneNumber">
                 <p className="username">Phone</p>
                 <input
@@ -233,7 +228,7 @@ export const page = () => {
             </div>
 
             {/* Email address */}
-            <div className="my-3 col-12 row">
+            <div className="my-3  row">
               <label htmlFor="emailAddress">
                 <p className="username">Email address</p>
                 <input type="email" id="emailAddress" className="inputField" 
@@ -252,7 +247,7 @@ export const page = () => {
             </div>
 
             {/* Additional Information*/}
-            <div className="my-5 col-12 row">
+            <div className="my-5  row">
               <label htmlFor="additional Information">
                 <input
                   type="text"
@@ -264,27 +259,28 @@ export const page = () => {
             </div>
           </div>
 
+
           {/* products Detail */}
 
-          <div className="col-6 py-5 px-4  ">
+          <div className="col-md-6 col-12 py-5 px-sm-4 px-2 ">
             {/* product details */}
             <div className="">
-              <div className="p-3">
+              <div className="p-3 orderDetail">
                 <div className="d-flex justify-content-between">
                   <p className="totalHeading">Product</p>
                   <p className="totalHeading">Sub total</p>
                 </div>
 
                 <div className="d-flex justify-content-between">
-                  <p className="otherdetails">
+                  <p className="productName">
                     Asgaard sofa <span style={{ color: "black" }}>x 1</span>
                   </p>
-                  <p className="breadcrums">Rs. 250,000.00</p>
+                  <p className="subTotal">Rs. 250,000.00</p>
                 </div>
 
                 <div className="d-flex justify-content-between">
                   <p className="username">Sub total</p>
-                  <p className="breadcrums">Rs. 250,000.00</p>
+                  <p className="subTotal">Rs. 250,000.00</p>
                 </div>
 
                 <div className="d-flex justify-content-between">
@@ -297,9 +293,8 @@ export const page = () => {
                 {/* Radio Button for Payment */}
 
                 <div style={{ color: "#000" }}>
-                  <p className="d-flex gap-2">
-                    <input type="radio" checked name="tranfer" /> Direct Bank
-                    Transfer
+                  <p className="d-flex gap-2 subTotal">
+                    <input type="radio"  name="transfer"  /> Direct BankTransfer
                   </p>
 
                   {/* bank Desciption */}
@@ -314,7 +309,7 @@ export const page = () => {
                     className="d-flex gap-2 bankDescription"
                     style={{ fontWeight: "500" }}
                   >
-                    <input type="radio" name="tranfer" /> Direct Bank Transfer
+                    <input type="radio" name="transfer" /> Direct Bank Transfer
                   </p>
 
                   {/* Cash on Delivery radio button */}
@@ -322,7 +317,7 @@ export const page = () => {
                     className="d-flex gap-2 bankDescription"
                     style={{ fontWeight: "500" }}
                   >
-                    <input type="radio" name="tranfer" /> Cash On Delivery
+                    <input type="radio" name="transfer" /> Cash On Delivery
                   </p>
 
                   {/* policy div */}
@@ -355,4 +350,5 @@ export const page = () => {
   );
 };
 
-export default page;
+export default CheckOut
+

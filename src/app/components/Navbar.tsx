@@ -11,10 +11,12 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import { useState } from "react";
 import { GrCart } from "react-icons/gr";
+import { useRouter } from "next/navigation";
 
 
 export const Navbar = () => {
 
+    const router = useRouter();
 
  const [showSideBar, setShowSideBar] = useState(false);
 
@@ -24,6 +26,11 @@ export const Navbar = () => {
  
  const hideBar = () => {
     setShowSideBar(false)
+ }
+
+ const navigateTo = (url) => {
+    router.push(url)
+    hideBar()
  }
 
   return (
@@ -49,10 +56,10 @@ export const Navbar = () => {
 
             <div className="nav-icons gap-4 ">
                 
-                 <p><Link href="/" className="link"><FaRegUser /></Link></p> 
+                 <p><Link href="/MyAccount" className="link"><FaRegUser /></Link></p> 
                 <p><FiSearch/></p>
-                <p><Link href="/" className="link"><FaRegHeart /></Link></p>
-                <p><Link href="/" className="link"><GrCart/></Link></p>  
+                <p><Link href="/CheckOut" className="link"><FaRegHeart /></Link></p>
+                <p><Link href="/Cart" className="link"><GrCart/></Link></p>  
                 
 
                 
@@ -77,10 +84,10 @@ export const Navbar = () => {
         <div className="sideBar">
          <p onClick={hideBar} className="closeIcon"><IoMdClose/></p>
         <ul className="sideBarLinks">
-                <li><Link href="/" className="link ">Home</Link></li>
-                <li><Link href="/" className="link">Shop</Link></li>
-                <li><Link href="/" className="link">About</Link></li>
-                <li><Link href="/" className="link">Contact</Link></li>
+        <li><div onClick={() => {navigateTo("/")}} className="link">Home</div></li>
+            <li><div onClick={() => {navigateTo("/shop")}}  className="link">Shop</div></li>
+            <li><div onClick={() => {navigateTo("/products")}}  className="link">About</div></li>
+            <li><div onClick={() => {navigateTo("/Contact")}}  className="link">Contact</div></li>
         </ul> 
         </div>
         : null

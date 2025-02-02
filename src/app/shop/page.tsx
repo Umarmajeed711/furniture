@@ -1,19 +1,15 @@
 import { Image } from "react-bootstrap";
 import "./shop.css";
-export const page = () => {
+import { HeroSection } from "../components/HeroSection";
+import { Properties } from "../components/properties";
+const Shop = () => {
   return (
     <div>
 
-       {/* Front Image */}
-      <div className="d-flex justify-content-center align-items-center shop">
-        <div className="d-flex justify-content-center align-items-center flex-column">
-          <Image src="./ShopImages/mablelogo/Meubel House_Logos-05.png" alt="" className="ImageHeight" />
-          <p className="pageHeading">Shop</p>
-          <p className="breadcrums">
-            <span style={{fontWeight:"500"}}>Home &gt;</span> Shop
-          </p>
-        </div>
-      </div>
+    
+       {/* Hero Section */}
+        <HeroSection pageHeading={'Shop'} navigate={'Shop'}/>
+      
 
       {/* filter div */}
       <div className="filter mt-5 d-flex justify-content-center align-items-center">
@@ -209,33 +205,12 @@ export const page = () => {
 
 
       {/* Properties div */}
-      <div className="property d-flex justify-content-center ">
-        <div className="row container ">
-          <div className="col-12 col-sm-4">
-            <p className="propertyHeading">Free Delivery</p>
-            <p className="propertypara">
-              For all oders over $50, consectetur adipim scing elit.
-            </p>
-          </div>
-
-          <div className="col-12 col-sm-4">
-            <p className="propertyHeading">90 Days Return</p>
-            <p className="propertypara">
-              If goods have problems, consectetur adipim scing elit.
-            </p>
-          </div>
-
-          <div className="col-12 col-sm-4">
-            <p className="propertyHeading">Secure Payment</p>
-            <p className="propertypara">
-              If goods have problems, consectetur adipim scing elit.
-            </p>
-          </div>
-        </div>
-      </div>
+     
+      <Properties />
 
     </div>
   );
 };
 
-export default page;
+
+export default Shop

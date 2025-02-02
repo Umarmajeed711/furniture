@@ -14,24 +14,27 @@ export const Footer = () => {
                 FL 33134 USA</p>
             </div>
 
-            <div className='d-flex gap-sm-5 gap-4 col-lg-8 col-md-9 col-sm-12'>
-                <div className='d-flex flex-column row-gap-3'>
+            <div className='footerLinks  gap-sm-5 gap-4 col-lg-8 col-md-9 col-sm-12 '>
+
+                <div className="d-flex gap-5">
+                <div className='d-flex flex-column row-gap-3  '>
                     <h6>Links</h6>
                     <Link href={"/"} className='link'>Home</Link>
-                    <Link href={"/"} className='link'>About</Link>
-                    <Link href={"/"} className='link'>Contact</Link>
-                     <Link href={"/"} className='link'>Login</Link>
+                    <Link href={"/products"} className='link'>About</Link>
+                    <Link href={"/contact"} className='link'>Contact</Link>
+                     <Link href={"/shop"} className='link'>Login</Link>
                 </div>
 
 
-                <div className='d-flex flex-column row-gap-3'>
+                <div className='d-flex flex-column row-gap-3 '>
                     <h6>Help</h6>
                     <Link href={"/"} className='link'>Payment Options</Link>
                     <Link href={"/"} className='link'>Return</Link>
                     <Link href={"/"} className='link'>Privacy Policy</Link>
                 </div>
+                </div>
 
-                <div className='d-flex flex-column '>
+                <div className='d-flex flex-column  '>
                     <h6>News letter</h6>
                     <form className='d-flex gap-2 flex-wrap'>
                         <input type="email" placeholder='Enter Your Email Address'required />
@@ -44,7 +47,7 @@ export const Footer = () => {
         </div>
 
         <hr />
-        <p style={{color:"black",}}>2024 Meubel House. All rights reverved</p>
+        <p style={{color:"black",}}>2025 Meubel House. All rights reserved</p>
     </div>
   )
 }

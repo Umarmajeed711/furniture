@@ -3,49 +3,44 @@ import { HiLocationMarker } from "react-icons/hi";
 import { FaPhone } from "react-icons/fa6";
 import { GoClockFill } from "react-icons/go";
 import "./contact.css";
-// import * as yup from "yup";
 import { Image } from "react-bootstrap";
-// import { useFormik } from "formik";
+import { HeroSection } from "../components/HeroSection";
+import { Properties } from "../components/properties";
+import { useFormik } from "formik";
+import * as yup from "yup";
 
 export const page = () => {
   // contact Validation
-  // const contactValidation = yup.object({
-  //   name: yup.string().required("name is required"),
-  //   email: yup
-  //     .string()
-  //     .required("email is required")
-  //     .email("enter a valid email address"),
-  // });
+  const contactValidation = yup.object({
+    name: yup.string().required("name is required"),
+    email: yup
+      .string()
+      .required("email is required")
+      .email("enter a valid email address"),
+  });
 
-  {
-    /* // initailizes the ContactFormik */
-  }
-  // const contactFormik = useFormik({
-  //   initialValues: {
-  //     name: "",
-  //     email: "",
-  //   },
-  //   validationSchema: contactValidation,
+  //  initailizes the ContactFormik
+  const contactFormik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+    },
+    validationSchema: contactValidation,
 
-  //   onSubmit: (values) => {
-  //     console.log(values);
-  //   },
-  // });
+    onSubmit: (values) => {
+      console.log(values);
+      contactFormik.resetForm();
+    },
+  });
 
   return (
     <div>
-      {/* Front Image */}
-      <div className="d-flex justify-content-center align-items-center shop">
-        <div className="d-flex justify-content-center align-items-center flex-column">
-          <Image src="/ShopImages/mablelogo/Meubel House_Logos-05.png" alt="" />
-          <p className="pageHeading">Contact</p>
-          <p className="breadcrums">
-            <span style={{ fontWeight: "500" }}>Home &gt;</span> contact
-          </p>
-        </div>
-      </div>
+     
+      {/* Hero Section */}
+      <HeroSection pageHeading={'Contact'} navigate={'contact'}/>
+      
 
-      <div className="container p-5 mt-5">
+      <div className="container p-5 mt-md-5 mt-3">
         <div style={{ textAlign: "center" }}>
           <h3>Get In touch with Us</h3>
           <p className="toppicspara">
@@ -68,8 +63,8 @@ export const page = () => {
                 </div>
 
                 <div>
-                  <p className="price">Address</p>
-                  <p className="title">
+                  <p className="info">Address</p>
+                  <p className="infoDetail">
                     236 5th SE Avenue, New York NY10000, United States
                   </p>
                 </div>
@@ -82,8 +77,8 @@ export const page = () => {
                 </div>
 
                 <div>
-                  <p className="price">Phone</p>
-                  <p className="title">
+                  <p className="info">Phone</p>
+                  <p className="infoDetail">
                     Mobile: +(84) 546-6789
                     <br />
                     Hotline: +(84) 456-6789
@@ -98,8 +93,8 @@ export const page = () => {
                 </div>
 
                 <div>
-                  <p className="price">Working Time</p>
-                  <p className="title">
+                  <p className="info">Working Time</p>
+                  <p className="infoDetail">
                     Monday-Friday: 9:00 - 22:00
                     <br />
                     Saturday-Sunday: 9:00 - 21:00
@@ -110,32 +105,33 @@ export const page = () => {
 
             {/* contact Details form*/}
             <div className="col-md-6 col-12">
-            {/* onSubmit={contactFormik.handleSubmit} */}
-              <form >
+
+          
+              <form onSubmit={contactFormik.handleSubmit}>
                 {/* name div */}
-                <div className="my-3 col-12 row">
+                <div className="my-3  row">
                   <label htmlFor="companyName">
                     <p className="username">Your name</p>
                     <input
                       type="text"
                       name="name"
-                      // value={contactFormik.values.name}
-                      // onChange={contactFormik.handleChange}
+                      value={contactFormik.values.name}
+                      onChange={contactFormik.handleChange}
                       placeholder="Abc"
                       id="companyName"
                       className="inputField "
                     />
                   </label>
-                  {/* {contactFormik.touched.name &&
+                  {contactFormik.touched.name &&
                   Boolean(contactFormik.errors.name) ? (
                     <p className="requiredError">
                       {contactFormik.touched.name && contactFormik.errors.name}
                     </p>
-                  ) : null} */}
+                  ) : null}
                 </div>
 
                 {/* Email address */}
-                <div className="my-3 col-12 row">
+                <div className="my-3  row">
                   <label htmlFor="emailAddress">
                     <p className="username">Email address</p>
                     <input
@@ -144,21 +140,21 @@ export const page = () => {
                       id="emailAddress"
                       className="inputField"
                       name="email"
-                      // value={contactFormik.values.email}
-                      // onChange={contactFormik.handleChange}
+                      value={contactFormik.values.email}
+                      onChange={contactFormik.handleChange}
                     />
                   </label>
-                  {/* {contactFormik.touched.email &&
+                  {contactFormik.touched.email &&
                   Boolean(contactFormik.errors.email) ? (
                     <p className="requiredError">
                       {contactFormik.touched.email &&
                         contactFormik.errors.email}
                     </p>
-                  ) : null} */}
+                  ) : null}
                 </div>
 
                 {/* Subject */}
-                <div className="my-3 col-12 row">
+                <div className="my-3  row">
                   <label htmlFor="emailAddress">
                     <p className="username">Subject</p>
                     <input
@@ -171,7 +167,7 @@ export const page = () => {
                 </div>
 
                 {/* Message */}
-                <div className="my-3 col-12 row">
+                <div className="my-3  row">
                   <label htmlFor="message">
                     <p className="username">Message</p>
                     <textarea
@@ -185,7 +181,7 @@ export const page = () => {
 
                 {/* register button */}
                 <div className="mt-4">
-                  <button type="submit" className="loginButton">
+                  <button type="submit" className="submitButton">
                     Submit
                   </button>
                 </div>
@@ -197,31 +193,8 @@ export const page = () => {
         </div>
       </div>
 
-       {/* Properties div */}
-       <div className="property d-flex justify-content-center ">
-        <div className="row container ">
-          <div className="col-12 col-sm-4">
-            <p className="propertyHeading">Free Delivery</p>
-            <p className="propertypara">
-              For all oders over $50, consectetur adipim scing elit.
-            </p>
-          </div>
-
-          <div className="col-12 col-sm-4">
-            <p className="propertyHeading">90 Days Return</p>
-            <p className="propertypara">
-              If goods have problems, consectetur adipim scing elit.
-            </p>
-          </div>
-
-          <div className="col-12 col-sm-4">
-            <p className="propertyHeading">Secure Payment</p>
-            <p className="propertypara">
-              If goods have problems, consectetur adipim scing elit.
-            </p>
-          </div>
-        </div>
-      </div>
+      {/* Properties div */}
+      <Properties />
     </div>
   );
 };

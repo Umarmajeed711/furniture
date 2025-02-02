@@ -3,8 +3,10 @@ import { useFormik } from "formik";
 import "./account.css";
 import { Image } from "react-bootstrap";
 import * as yup from "yup";
+import { HeroSection } from "../components/HeroSection";
+import { Properties } from "../components/properties";
 
-export const page = () => {
+ const Myaccount = () => {
   // login Validation
   const loginValidation = yup.object({
     userName: yup.string().required("Name is required"),
@@ -27,20 +29,14 @@ export const page = () => {
 
     onSubmit: (values) => {
       console.log(values);
+      loginFormik.resetForm();
     },
   });
   return (
     <div>
-      {/* Front Image */}
-      <div className="d-flex justify-content-center align-items-center shop">
-        <div className="d-flex justify-content-center align-items-center flex-column">
-          <Image src="/ShopImages/mablelogo/Meubel House_Logos-05.png" alt="" />
-          <p className="pageHeading">My Account</p>
-          <p className="breadcrums">
-            <span style={{ fontWeight: "500" }}>Home &gt;</span> My account
-          </p>
-        </div>
-      </div>
+     
+       {/* Hero Section */}
+      <HeroSection pageHeading={'My Account'} navigate={'My account'}/>
 
       {/* login form */}
 
@@ -53,7 +49,7 @@ export const page = () => {
               <p className="login">Login</p>
 
               {/* username div */}
-              <div className="my-3 col-12  row">
+              <div className="my-3   row">
                 <label htmlFor="username">
                   <p className="username">Username or email address</p>
                   <input
@@ -61,14 +57,13 @@ export const page = () => {
                     name="userName"
                     value={loginFormik.values.userName}
                     onChange={loginFormik.handleChange}
-                    required
                     id="username"
                     className="inputField "
                   />
                 </label>
                 {loginFormik.touched.userName &&
                 Boolean(loginFormik.errors.userName) ? (
-                  <p style={{ color: "red", margin: "0" }}>
+                  <p className="requiredError">
                     {loginFormik.touched.userName &&
                       loginFormik.errors.userName}
                   </p>
@@ -76,7 +71,7 @@ export const page = () => {
               </div>
 
               {/* password div */}
-              <div className="my-3 col-12  row">
+              <div className="my-3   row">
                 <label htmlFor="password">
                   <p className="username">Password</p>
                   <input
@@ -84,14 +79,13 @@ export const page = () => {
                     name="password"
                     value={loginFormik.values.password}
                     onChange={loginFormik.handleChange}
-                    required
                     id="password"
                     className="inputField"
                   />
                 </label>
                 {loginFormik.touched.password &&
                 Boolean(loginFormik.errors.password) ? (
-                  <p style={{ color: "red", margin: "0" }}>
+                  <p className="requiredError">
                     {loginFormik.touched.password &&
                       loginFormik.errors.password}
                   </p>
@@ -122,7 +116,7 @@ export const page = () => {
               <p className="login">Register</p>
 
               {/* email address div */}
-              <div className="col-12  row">
+              <div className="row">
                 <label htmlFor="username">
                   <p className="username">email address</p>
                   <input
@@ -160,32 +154,9 @@ export const page = () => {
       </div>
 
       {/* Properties div */}
-      <div className="property d-flex justify-content-center ">
-        <div className="row container ">
-          <div className="col-12 col-sm-4">
-            <p className="propertyHeading">Free Delivery</p>
-            <p className="propertypara">
-              For all oders over $50, consectetur adipim scing elit.
-            </p>
-          </div>
-
-          <div className="col-12 col-sm-4">
-            <p className="propertyHeading">90 Days Return</p>
-            <p className="propertypara">
-              If goods have problems, consectetur adipim scing elit.
-            </p>
-          </div>
-
-          <div className="col-12 col-sm-4">
-            <p className="propertyHeading">Secure Payment</p>
-            <p className="propertypara">
-              If goods have problems, consectetur adipim scing elit.
-            </p>
-          </div>
-        </div>
-      </div>
+           
+      <Properties />
     </div>
   );
 };
-
-export default page;
+export default Myaccount

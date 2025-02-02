@@ -14,11 +14,27 @@ ul li {
     color: black;
 }
 
+
 .link{
-    color: black;
-    text-decoration: none;
     font-weight: 600;
     font-size: 17px;
+    text-decoration: none;
+    color: black;
+    transition: all .3s;
+}
+
+.link::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background-color: black;
+  display: block;
+  margin: 1px;
+
+}
+.link:hover::after , .link:active::after{
+    width: 100%;
+    transition: all .5s;
 }
 
 .sideBar{
@@ -44,8 +60,10 @@ ul li {
     row-gap: 20px;
 }
 
+
 .closeIcon{
     padding: 5%;
+    font-size: 30px;
 }
 
 .nav-links{
@@ -84,5 +102,8 @@ ul li {
 @media (max-width: 400px){
     .sideBar{
         width: 100vw;
+    }
+    .link{
+        font-size: 16px !important;
     }
 }

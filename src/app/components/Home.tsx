@@ -4,6 +4,7 @@ import '../Style.css'
 // import Image from "next/image";
 import { Image } from "react-bootstrap"
 import Carousel from 'react-bootstrap/Carousel';
+import { TopPics } from './TopPics';
 
 
 export const Home = () => {
@@ -67,42 +68,8 @@ export const Home = () => {
           <div className="container">
 
           
-        <div className="mt-5 row ">
-          <div className="mycards p-2 col-lg-3 col-md-6 ">
-            <div style={{height:"287px",width:"100%"}}>
-            <Image src="/ToppicsForyou/TrentorSofa.png" alt="" />
-            </div>
-            <p className="title">Trentor Modular sofa-3</p>
-            <p className="price">Rs. 25,000</p>
-          </div>
-
-          <div className="mycards p-2 col-lg-3 col-md-6 ">
-          <div style={{height:"287px",width:"100%"}}>
-            <Image src="/ToppicsForyou/Granite dining table with dining chair 1.png" alt=""  />
-            </div>
-            <p className="title">Granite dining table with dining chair</p>
-            <p className="price">Rs. 25,000</p>
-          </div>
-
-
-          <div className="mycards p-2 col-lg-3 col-md-6 ">
-          <div style={{height:"287px",width:"100%"}}>
-            <Image src="/ToppicsForyou/Mask group (1).png" alt="" />
-          </div>
-          <p className="title">Outdoor bar table and stool</p>
-          <p className="price">Rs. 25,000</p>
-          </div>
-
-
-          <div className="mycards p-2 col-lg-3 col-md-6 ">
-          <div style={{height:"287px",width:"100%",textAlign:"center"}}>
-            <Image src="/ToppicsForyou/Mask group (2).png" alt="" />
-          </div>
-          <p className="title">Plain console with teak mirror</p>
-          <p className="price">Rs. 25,000</p>
-          </div>
-
-        </div>
+        
+        <TopPics />
 
          <div className="mt-5" style={{textAlign:'center'}}>
          <span className="underButton">View More</span>

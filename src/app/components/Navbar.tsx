@@ -29,7 +29,7 @@ export const Navbar = () => {
     setShowSideBar(false)
  }
 
- const navigateTo = (url) => {
+ const navigateTo = (url:string) => {
     router.push(url)
     hideBar()
  }

@@ -198,4 +198,4 @@ import * as yup from "yup";
   );
 };
 
-export default Contact;
+export default Contact

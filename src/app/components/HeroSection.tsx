@@ -2,7 +2,7 @@
 import { Image } from "react-bootstrap";
 import './component.css'
 
-export const HeroSection = (props) => {
+export const HeroSection = (props:any) => {
   return (
     <div>
         {/* Front Image */}

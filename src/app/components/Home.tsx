@@ -48,7 +48,7 @@ export const Home = () => {
           <div className="d-flex flex-column sideDiv col-sm-6 col-10">
              <Image  src="/SideTable/cloudSofa.png" alt="cloud sofa" style={{height:"100%"}}/>
             <div className="side">
-            <p className='sideTable'>Side Table</p>
+            <p className='sideTable'>Side Sofa</p>
             <span className="underButton">View More</span>
             </div> 
           </div>
@@ -130,7 +130,7 @@ export const Home = () => {
                <p>Going all-in with millenail design</p>
                <span className="underButton">Read More</span>
 
-               <div className="d-flex gap-2 justify-content-center mt-3">
+               <div className="blogTime mt-3">
                 <p><FaRegClock className='time'/> 5 min</p>
                 <p><RiCalendarTodoFill className='time'/> 2 Feb 2025</p>
                </div>
@@ -151,7 +151,7 @@ export const Home = () => {
            <p>Going all-in with millenail design</p>
            <span className="underButton">Read More</span>
 
-               <div className="d-flex gap-2 justify-content-center mt-3">
+               <div className="blogTime mt-3">
                <p><FaRegClock className='time'/> 5 min</p>
                <p><RiCalendarTodoFill className='time'/> 2 Feb 2025</p>
                </div>
@@ -171,7 +171,7 @@ export const Home = () => {
             <p>Going all-in with millenail design</p>
             <span className="underButton">Read More</span>
 
-               <div className="d-flex gap-2 justify-content-center mt-3">
+               <div className="blogTime mt-3">
                <p><FaRegClock className='time'/> 5 min</p>
                <p><RiCalendarTodoFill className='time'/> 2 Feb 2025</p>
                </div>

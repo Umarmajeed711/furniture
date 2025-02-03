@@ -103,7 +103,7 @@ import { AiFillDelete } from "react-icons/ai";
 
             {/* cheack out button */}
             <div className='my-3'>
-                <button type='submit' className='loginButton'>
+                <button type='submit' className='checkOutButton'>
                     check out
                 </button>
             </div>

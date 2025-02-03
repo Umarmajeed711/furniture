@@ -330,7 +330,7 @@ import * as yup from "yup";
 
                 {/* place order button */}
                 <div className="d-flex justify-content-center my-4">
-                  <button type="submit" className="loginButton ">
+                  <button type="submit" className="PlaceOrderButton ">
                     Place order
                   </button>
                 </div>

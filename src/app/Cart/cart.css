@@ -29,7 +29,7 @@ line-height: 30px;
 
 
 }
-.loginButton{
+.checkOutButton{
     padding: 7px 30px;
     border: 1px solid black;
     background-color: transparent;
@@ -37,7 +37,7 @@ line-height: 30px;
     transition: all .3s;
 }
 
-.loginButton:hover , .loginButton:active{
+.checkOutButton:hover , .checkOutButton:active{
     background-color: #9F9F9F;
     box-shadow: 0 0 5px #000;
 }
@@ -115,9 +115,6 @@ line-height: 30px;
     .cartForPc{
         display: none;
     }
-    .loginButton{
-        padding: 3px 15px;
-    }
     .mobileFields{
         display: flex;
         justify-content: space-between;
@@ -143,8 +140,8 @@ line-height: 30px;
         font-weight: 500;
         line-height: 30px;
     }
-    .loginButton{
-        padding: 10px 30px;
+    .checkOutButton{
+        padding: 10px 20px;
         border: 1px solid black;
         background-color: transparent;
         border-radius: 5px;

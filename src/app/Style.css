@@ -383,7 +383,7 @@ height: 450px;
   height: 400px;
 }
 .newArrivals {
-  width: 200px;
+  /* width: 200px; */
   height: 230px;
   text-align: center;
 }
@@ -492,7 +492,7 @@ height: 400px;
   height: 350px;
 }
 .newArrivals {
-  width: 70%;
+  /* width: 70%; */
   height: 230px;
   text-align: center;
 }
